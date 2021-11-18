@@ -22,7 +22,7 @@ class AlgoBest:
         self.stopsFlr = [0] * self.lenElev
         self.direction = [0] * self.lenElev
         self.outFile = outFile
-        self.maxStops = int(self.building.getRange())
+        self.maxStops = int(self.building.getRange() / self.lenElev)
         self.upDownElevators()
 
         for i in range(self.lenElev):
@@ -30,6 +30,13 @@ class AlgoBest:
             self.stops[i] = []
             self.stopsFlr[i] = []
 
+    def __del__(self):
+        del self.up
+        del self.down
+        del self.level
+        del self.stops
+        del self.stopsFlr
+        del self.direction
 
     def upDownElevators(self):
         up = 0
@@ -60,7 +67,7 @@ class AlgoBest:
             c = {}
             for col in self.calls.columns:
                 c[col] = self.calls[col][i]
-            self.calls.loc[i, "state"] = -1
+            self.calls.loc[i, "state"] = 0
             self.calls.loc[i, "alc"] = self.allocateAnElevator(c)
             #print(self.calls["alc"][i])
         self.calls.to_csv(self.outFile, index=False, header=None)
@@ -147,7 +154,7 @@ class AlgoBest:
 
             if curr._minFloor <= c["src"] and c["dst"] <= curr._maxFloor:
                 if len(self.stopsFlr[i]) <= self.maxStops:
-                    if self.getCalcTimeUp(i, c["src"], c["dst"]) < self.getCalcTimeUp(index, c["src"], c["dst"]):
+                    if self.getCalcTimeUp(curr, c["src"], c["dst"]) < self.getCalcTimeUp(self.elevators[index], c["src"], c["dst"]):
                         index = i
         return index
 
@@ -164,20 +171,18 @@ class AlgoBest:
                 continue
             if curr._minFloor <= c["dst"] and c["src"] <= curr._maxFloor:
                 if len(self.stopsFlr[i]) <= self.maxStops:
-                    if self.getCalcTimeDown(i, c["src"], c["dst"]) < self.getCalcTimeDown(index, c["src"], c["dst"]):
+                    if self.getCalcTimeDown(curr, c["src"], c["dst"]) < self.getCalcTimeDown(self.elevators[index], c["src"], c["dst"]):
                         index = i
         return index
 
-    def getCalcTimeUp(self, i, src, dst):
-        curr = self.elevators[i]
-        stopsNum = self.howManyStopsUp(i, dst)
+    def getCalcTimeUp(self, curr, src, dst):
+        stopsNum = self.howManyStopsUp(curr._id, dst)
         time = stopsNum * curr.getTimeOverall()
         time += (abs(dst - src) + abs(curr._pos - src)) / curr._speed
         return time
 
-    def getCalcTimeDown(self, i, src, dst):
-        curr = self.elevators[i]
-        stopsNum = self.howManyStopsDown(i, dst)
+    def getCalcTimeDown(self, curr, src, dst):
+        stopsNum = self.howManyStopsDown(curr._id, dst)
         time = stopsNum * curr.getTimeOverall()
         time += (abs(dst - src) + abs(curr._pos - src)) / curr._speed
         return time
