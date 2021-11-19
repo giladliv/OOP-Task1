@@ -77,3 +77,4 @@ The big diffrence, that in the online being handled live while the offline mode 
 OUR algorithm work like that:
 1. For each new call simulate all the elevtors movments, run then to the given time stamp
 2. perform as the [(online algorithm)](#online_exp) for each call, and set the best allocation for thus elevator
+
