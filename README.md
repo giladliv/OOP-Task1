@@ -1,10 +1,6 @@
 # OOP-Task1
 the second task of oop course - offline elevators
 
-**Table of Contents**
-
-[TOCM]
-
 ### Students
 Gilad livshitz & Batel Cohen
 @github/giladliv & @github/BatelCohen7
@@ -19,12 +15,14 @@ Please make sure that you visit our Simulator (Runs the same as Ex1.py): <a href
 ## About elevators
 
 ### links
-first of all there are some intresting links that helped us to understand more about how elevators are functioning, and through them we got some insperation
+First of all there are some intresting links that helped us to understand more about how elevators are functioning, and through them we got some insperation
 
 - [DUPLEX elevator call logic](http://https://www.youtube.com/watch?v=oY1QlCqWOss "DUPLEX elevator call logic")
 - [Elevator Call Logic](https://www.youtube.com/watch?v=BCN9mQOT3RQ "Elevator Call Logic")
 - [Smart Elevators App](https://youtu.be/yzLxHEkXY5Q "Smart Elevators App")
 - [Elevators - the Next Generation](https://www.youtube.com/watch?v=WEQ71bA8hQk "Elevators - the Next Generation")
+
+The previous task (Ex0 - as it was submitted) is here at this link: <a href="https://github.com/giladliv/OOP-Task0.git">Ex0 Github Link</a>
 
 ## On-line vs. Off-line
 
