@@ -9,11 +9,11 @@ the second task of oop course - offline elevators
 Gilad livshitz & Batel Cohen
 @github/giladliv & @github/BatelCohen7
 
-## Simulator
+## Simulator (Bonus)
 this is the video of the run of our simulator:
-[Gilad's And Batel's Elevator Simulator](https://youtu.be/iZcspYH_p3k "Gilad's And Batel's Elevator Simulator")
+[Gilad's And Batel's Elevator Simulator](https://youtu.be/iZcspYH_p3k "Gilad's And Batel's Elevator Simulator") - https://youtu.be/iZcspYH_p3k
 
-https://youtu.be/iZcspYH_p3k
+Please make sure that you visit our Simulator (Runs the same as Ex1.py): <a href="Ex1/src/ElevatorSimulator.py">ElevatorSimulator.py</a>
 
 
 ## About elevators
