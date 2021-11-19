@@ -6,7 +6,6 @@ from AlgoBest import AlgoBest
 
 
 class SimulatorElev(AlgoBest):
-    DELAY_TIME = 0.1
 
     def __init__(self, build, calls, outFile):
         super().__init__(build, calls, outFile)
@@ -24,6 +23,8 @@ class SimulatorElev(AlgoBest):
         self.mid.pack(side=TOP)
         self.low = Frame(self.root)
         self.low.pack(side=TOP)
+
+        self.root.title('Gilad Livshitz & Batel Cohen\'s Simulator')
         self.root.state('zoomed')
 
         for i in range(self.lenElev):
@@ -35,6 +36,10 @@ class SimulatorElev(AlgoBest):
 
         self.label = Label(self.mid, text=" ", font=10)
         self.label.pack(side=LEFT)
+
+        self.cpr = Label(self.low, text="          Gilad Livshitz & Batel Cohen\'s Simulator", font=10)
+        self.cpr.pack(side=LEFT)
+
 
 
 
@@ -55,7 +60,7 @@ class SimulatorElev(AlgoBest):
             for ind in range(self.lenElev):
                 self.slides[ind].set(self.elevators[ind]._pos)
             self.label['text'] = str(self.calls["dt"][i])
-            time.sleep(self.DELAY_TIME)
+            time.sleep(0.1)
             self.root.update()
 
         self.calls.to_csv(self.outFile, index=False, header=None)
