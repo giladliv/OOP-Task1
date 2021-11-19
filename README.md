@@ -4,7 +4,7 @@ the second task of oop course - offline elevators
 ### Students
 Gilad livshitz & Batel Cohen
 
-[@giladliv](https://github.com/giladliv "@giladliv") & [@BatelCohen7](https://github.com/BatelCohen7 "@BatelCohen7")
+[@giladliv](https://github.com/giladliv) & [@BatelCohen7](https://github.com/BatelCohen7)
 
 ## Simulator (Bonus)
 this is the video of the run of our simulator:
