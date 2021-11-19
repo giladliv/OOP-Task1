@@ -51,7 +51,11 @@ This is OUR algorithm:
 4. For Each elevator we check if the source and destination floors are in the bounderies of itself, olso we check if it doesn't reached to the maximum stops that it capable to have (the maximum stops is the range of theelevator (high floor - low floor)).
 5. We now compare the elevators by who has the lowes time ro reach from its current position to the source floor and then from the source floor to the destination floor.
 	*curr postition ----> source floor ----> destination floor*
-7. After we found our winner elevator, we will save those sourc and destination floors as the stops of the elevator (in sorted way: up - regularly, down- reversed)
+6. After we found our winner elevator, we will save those sourc and destination floors as the stops of the elevator (in sorted way: up - regularly, down- reversed)
+
+#### Online Solution Design
+![UML Design of Task 0](UML_task0.png)
+
 
 #### Results - online
 ```
