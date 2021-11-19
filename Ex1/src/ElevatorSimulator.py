@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import *
 
 from AlgoBest import AlgoBest
+from Ex1 import checkIfArgsCorrect
 
 
 class SimulatorElev(AlgoBest):
@@ -13,7 +14,9 @@ class SimulatorElev(AlgoBest):
         self.max = self.building._maxFloor
         self.initSim()
 
-
+    """
+        the heart of the Simulator's visuals 
+    """
     def initSim(self):
         self.slides = []
         self.root = tk.Tk()
@@ -34,14 +37,11 @@ class SimulatorElev(AlgoBest):
             s.set(0)
             self.slides.append(s)
 
-        self.label = Label(self.mid, text=" ", font=10)
+        self.label = Label(self.mid, text=" ", font=10)     # the label of the current dt time
         self.label.pack(side=LEFT)
 
-        self.cpr = Label(self.low, text="          Gilad Livshitz & Batel Cohen\'s Simulator", font=10)
+        self.cpr = Label(self.low, text="Gilad Livshitz & Batel Cohen\'s Simulator", font=10)
         self.cpr.pack(side=LEFT)
-
-
-
 
         self.B = tk.Button(self.low, text="start simulator", command=self.runAlgo, font=10)
         for i in range(self.lenElev):
@@ -58,7 +58,7 @@ class SimulatorElev(AlgoBest):
             self.calls.loc[i, "alc"] = self.allocateAnElevator(c)
             # print(self.calls["alc"][i])
             for ind in range(self.lenElev):
-                self.slides[ind].set(self.elevators[ind]._pos)
+                self.slides[ind].set(self.elevators[ind]._pos)      # the only change - after every simulation set to scale the position
             self.label['text'] = str(self.calls["dt"][i])
             time.sleep(0.1)
             self.root.update()
@@ -69,22 +69,6 @@ class SimulatorElev(AlgoBest):
         self.root.mainloop()
 
 #self.root.mainloop()
-
-def checkIfArgsCorrect(argc, argv):
-    check = True
-    if argc < 4:
-        print("some files are missing")
-        check = False
-    else:
-        if not argv[1].endswith(".json"):
-            print("ending does not match to the building file (1)")
-            check = False
-        if not argv[2].endswith(".csv"):
-            print("ending does not match to the calls file (2)")
-            check = False
-        if not argv[3].endswith(".csv"):
-            print("ending does not match to the output file (3)")
-            check = False
 
 def main(argc, argv):
     try:
