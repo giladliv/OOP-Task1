@@ -31,7 +31,7 @@ the Online way is to deal with call at the moment they are being called, they ar
 For Example: I am up to attend a meeting int 5 minutes at floor 59, I am currently at the Lobby level (the floor 0). There are other peaple at diffrent levels, assumed to be a guy named "Mathew", he wants to go from the 3rd flr to the 55th flr, other, "Jane Doe" is as level 47 and want to reach the -2 floor (the Parking-lot).
 The elevators will calculate for each call, the shortest and the safest the route from their current floor to their destinations.
 
-<a name="online exp"></a>
+<a name="online_exp"></a>
 #### How are they doing that?
 This is OUR algorithm:
 1. The elevetors are sorted by: 
@@ -53,8 +53,8 @@ This mode is diffrent, assumed to be an app that links the phone to the elevator
 The offline mode gets all the future calls, and when they are excpected to be made.
 
 #### How are they doing that?
-The Base algorithm is very similar to the Online mode [(read more about online algorithm)](#online exp).
+The Base algorithm is very similar to the Online mode [(read more about online algorithm)](#online_exp).
 The big diffrence, that in the online being handled live while the offline mode only give the allocation.
 OUR algorithm work like that:
 1. For each new call simulate all the elevtors movments, run then to the given time stamp
-2. perform as the [(online algorithm)](#online exp) for each call, and set the best allocation for thus elevator
+2. perform as the [(online algorithm)](#online_exp) for each call, and set the best allocation for thus elevator
