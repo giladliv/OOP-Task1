@@ -78,3 +78,26 @@ OUR algorithm work like that:
 1. For each new call simulate all the elevtors movments, run then to the given time stamp
 2. perform as the [(online algorithm)](#online_exp) for each call, and set the best allocation for thus elevator
 
+#### Results
+```
+Building:1, Calls: a :: Total waiting time: 11292.0,  average waiting time per call: 112.92,  unCompleted calls,0,  certificate, -276000130
+Building:1, Calls: b :: Total waiting time: 1784243.6402240375,  average waiting time per call: 1784.2436402240376,  unCompleted calls,963,  certificate, -4320440287
+Building:1, Calls: c :: Total waiting time: 1839360.3121899734,  average waiting time per call: 1839.3603121899735,  unCompleted calls,958,  certificate, -4662242705
+Building:1, Calls: d :: Total waiting time: 1841698.4976999543,  average waiting time per call: 1841.6984976999543,  unCompleted calls,950,  certificate, -4714308913
+Building:2, Calls: a :: Total waiting time: 5782.0,  average waiting time per call: 57.82,  unCompleted calls,0,  certificate, -214258795
+Building:2, Calls: b :: Total waiting time: 1783484.6402240375,  average waiting time per call: 1783.4846402240375,  unCompleted calls,963,  certificate, -4323348836
+Building:2, Calls: c :: Total waiting time: 1837974.3121899734,  average waiting time per call: 1837.9743121899735,  unCompleted calls,958,  certificate, -4655515835
+Building:2, Calls: d :: Total waiting time: 1840475.4976999543,  average waiting time per call: 1840.4754976999543,  unCompleted calls,950,  certificate, -4709414788
+Building:3, Calls: a :: Total waiting time: 4296.0,  average waiting time per call: 42.96,  unCompleted calls,0,  certificate, -266076112
+Building:3, Calls: b :: Total waiting time: 543481.1207680005,  average waiting time per call: 543.4811207680004,  unCompleted calls,266,  certificate, -1766820374
+Building:3, Calls: c :: Total waiting time: 606086.2405200074,  average waiting time per call: 606.0862405200074,  unCompleted calls,264,  certificate, -2049495482
+Building:3, Calls: d :: Total waiting time: 565111.0294020068,  average waiting time per call: 565.1110294020068,  unCompleted calls,247,  certificate, -1924914931
+Building:4, Calls: a :: Total waiting time: 1983.0,  average waiting time per call: 19.83,  unCompleted calls,0,  certificate, -77066297
+Building:4, Calls: b :: Total waiting time: 312538.5765120012,  average waiting time per call: 312.5385765120012,  unCompleted calls,94,  certificate, -1196769428
+Building:4, Calls: c :: Total waiting time: 291829.89226499974,  average waiting time per call: 291.8298922649997,  unCompleted calls,73,  certificate, -1016207874
+Building:4, Calls: d :: Total waiting time: 287681.67718200164,  average waiting time per call: 287.68167718200164,  unCompleted calls,77,  certificate, -1013387110
+Building:5, Calls: a :: Total waiting time: 1739.0,  average waiting time per call: 17.39,  unCompleted calls,0,  certificate, -67180307
+Building:5, Calls: b :: Total waiting time: 45062.0,  average waiting time per call: 45.062,  unCompleted calls,0,  certificate, -238938887
+Building:5, Calls: c :: Total waiting time: 43765.0,  average waiting time per call: 43.765,  unCompleted calls,0,  certificate, -262606433
+Building:5, Calls: d :: Total waiting time: 45792.0,  average waiting time per call: 45.792,  unCompleted calls,0,  certificate, -238938887
+```
