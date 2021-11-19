@@ -9,13 +9,19 @@ the second task of oop course - offline elevators
 Gilad livshitz & Batel Cohen
 @github/giladliv & @github/BatelCohen7
 
+## Simulator
+this is the video of the run of our simulator:
+[Gilad's And Batel's Elevator Simulator](https://youtu.be/iZcspYH_p3k "Gilad's And Batel's Elevator Simulator")
+
+https://youtu.be/iZcspYH_p3k
+
 
 ## About elevators
 
 ### links
 first of all there are some intresting links that helped us to understand more about how elevators are functioning, and through them we got some insperation
 
-- [ DUPLEX elevator call logic](http://https://www.youtube.com/watch?v=oY1QlCqWOss " DUPLEX elevator call logic")
+- [DUPLEX elevator call logic](http://https://www.youtube.com/watch?v=oY1QlCqWOss "DUPLEX elevator call logic")
 - [Elevator Call Logic](https://www.youtube.com/watch?v=BCN9mQOT3RQ "Elevator Call Logic")
 - [Smart Elevators App](https://youtu.be/yzLxHEkXY5Q "Smart Elevators App")
 - [Elevators - the Next Generation](https://www.youtube.com/watch?v=WEQ71bA8hQk "Elevators - the Next Generation")
@@ -44,9 +50,22 @@ This is OUR algorithm:
 **Note 2:** we choose the first elevator to be comapared by random, we ensure this action, that of the all elevators have got allocated
 4. For Each elevator we check if the source and destination floors are in the bounderies of itself, olso we check if it doesn't reached to the maximum stops that it capable to have (the maximum stops is the range of theelevator (high floor - low floor)).
 5. We now compare the elevators by who has the lowes time ro reach from its current position to the source floor and then from the source floor to the destination floor.
-curr postition ----> source floor ----> destination floor
-6. After we found our winner elevator, we will save those sourc and destination floors as the stops of the elevator (in sorted way: up - regularly, down- reversed)
+	*curr postition ----> source floor ----> destination floor*
+7. After we found our winner elevator, we will save those sourc and destination floors as the stops of the elevator (in sorted way: up - regularly, down- reversed)
 
+#### Results - online
+```
+Case,0,  Total waiting time: 235.9897426188186,  average waiting time per call: 23.59897426188186,  unCompleted calls,1,  certificate, -675652664
+Case,1,  Total waiting time: 401.9897426188186,  average waiting time per call: 40.19897426188186,  unCompleted calls,5,  certificate, -1431989115
+Case,2,  Total waiting time: 6389.792822120196,  average waiting time per call: 63.897928221201965,  unCompleted calls,8,  certificate, -2250125245
+Case,3,  Total waiting time: 23270.53828433313,  average waiting time per call: 58.17634571083283,  unCompleted calls,3,  certificate, -1885689780
+Case,4,  Total waiting time: 28094.455368642088,  average waiting time per call: 56.188910737284175,  unCompleted calls,3,  certificate, -1954468862
+Case,5,  Total waiting time: 136976.12115705173,  average waiting time per call: 136.97612115705172,  unCompleted calls,36,  certificate, -4743262737
+Case,6,  Total waiting time: 93828.8820969485,  average waiting time per call: 93.82888209694849,  unCompleted calls,18,  certificate, -3116642605
+Case,7,  Total waiting time: 275113.12115705176,  average waiting time per call: 275.11312115705175,  unCompleted calls,74,  certificate, -16423214849
+Case,8,  Total waiting time: 210815.8820969488,  average waiting time per call: 210.8158820969488,  unCompleted calls,39,  certificate, -7410625776
+Case,9,  Total waiting time: 79486.34007431248,  average waiting time per call: 79.48634007431248,  unCompleted calls,8,  certificate, -2871005606
+```
 
 ### Offline Algorithm
 This mode is diffrent, assumed to be an app that links the phone to the elevator, we can scadual a call to pick us at wanted moment.
